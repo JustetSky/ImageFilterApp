@@ -5,7 +5,7 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        File inputImage = new File("src/images/squirrel.jpg");
+        File inputImage = new File("src/images/cat.jpg");
 
         if (inputImage.exists()) {
             System.out.println("\nИсходное изображение: " + inputImage);
@@ -14,7 +14,7 @@ public class Main {
 
             //Добавляем импульсный шум (15%)
             BufferedImage noisedImage = ImageHandler.impulseNoise(loadedImage, 0.15);
-            String noisedImagePath = "src/images/squirrel_noised.jpg";
+            String noisedImagePath = "src/images/cat_noised.jpg";
             ImageHandler.save(noisedImage, noisedImagePath);
             System.out.println("Зашумленное изображение: " + noisedImagePath);
 
